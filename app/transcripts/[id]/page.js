@@ -80,14 +80,6 @@ export default async function TranscriptPage({ params }) {
         <Meta label="Closed by" value={t.closedByTag ?? "Automatically (inactivity)"} />
         <Meta label="Messages" value={String(t.messageCount)} />
         <Meta label="Reason" value={t.closeReason ?? "No reason provided"} />
-        <Meta
-          label="Rating"
-          value={
-            t.rating
-              ? `${"★".repeat(t.rating)}${"☆".repeat(5 - t.rating)} (${t.rating}/5)`
-              : "Not rated"
-          }
-        />
       </dl>
 
       <ol className="messages">
