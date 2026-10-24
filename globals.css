@@ -1,0 +1,111 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f1117;
+  --panel: #181b24;
+  --line: #2a2f3d;
+  --ink: #eceef4;
+  --muted: #9097a8;
+  --accent: #7c8cff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+a { color: var(--accent); }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+.center { text-align: center; padding-top: 80px; }
+.muted { color: var(--muted); }
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 { margin: 8px 0 0; font-size: 32px; }
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px 24px;
+  margin: 20px 0 0;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 14px;
+}
+@media (min-width: 640px) { .meta { grid-template-columns: 1fr 1fr; } }
+.meta div { display: flex; gap: 8px; min-width: 0; }
+.meta dt { color: var(--muted); flex-shrink: 0; }
+.meta dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+
+.messages {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.msg { display: flex; gap: 12px; }
+.avatar {
+  width: 40px;
+  height: 40px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: var(--panel);
+  flex-shrink: 0;
+}
+.body { min-width: 0; flex: 1; }
+.head { margin: 0; font-size: 14px; }
+.author { font-weight: 600; }
+.badge {
+  margin-left: 8px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(124, 140, 255, 0.2);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.time { margin-left: 8px; font-size: 12px; color: var(--muted); }
+.text {
+  margin: 2px 0 0;
+  font-size: 14px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: rgba(236, 238, 244, 0.92);
+}
+
+.embed {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: var(--panel);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  font-size: 14px;
+}
+.embed-title { margin: 0; font-weight: 600; }
+.embed-desc {
+  margin: 4px 0 0;
+  color: var(--muted);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.files { list-style: none; margin: 8px 0 0; padding: 0; font-size: 14px; }
+
+.note { margin-top: 40px; font-size: 12px; color: var(--muted); }
